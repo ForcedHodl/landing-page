@@ -5,7 +5,7 @@ import moon from "../assets/moon.mp4";
 export default function HomePage() {
   return (
     <SMainContainer>
-      <SMoon src={moon} autoPlay />
+      <SMoon src={moon} autoPlay muted loop controls={false} />
     </SMainContainer>
   );
 }
@@ -19,4 +19,5 @@ const SMainContainer = styled.main`
 const SMoon = styled.video`
   max-width: 100%;
   max-height: 90vh;
+  pointer-events: none;
 `;

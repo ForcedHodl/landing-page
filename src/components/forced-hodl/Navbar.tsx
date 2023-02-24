@@ -28,6 +28,7 @@ export default function Navbar() {
               key={route.path}
               to={route.path}
               className={({ isActive }) => (isActive ? "active" : undefined)}
+              onClick={(event) => event.stopPropagation()}
             >
               {route.name}
             </SNavLink>
@@ -162,7 +163,7 @@ const SMenuTrigger = styled.button`
 
 const SPhoneMenu = styled.div`
   position: fixed;
-  top: 5rem;
+  top: 4rem;
   bottom: 0;
   right: 0;
   background: black;
